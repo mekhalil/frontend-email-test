@@ -37,7 +37,7 @@ function Result(props: Props) {
                 <h5 className="result-header__title">Your email has been sent</h5>
             </header>
             <hr/>
-            <div className="content">
+            <div className="result-content">
                 <h4 className="email-subject">{props.email.subject}</h4>
                 <span className="email-reciever">to {props.email.toEmail ? props.email.toEmail.value : ''}</span>
                 <p className="message">{props.email.message}</p>
