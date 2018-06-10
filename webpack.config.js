@@ -3,15 +3,16 @@ const path = require('path');
 module.exports = {
     context: __dirname,
     entry: [
-        './src/App.jsx'
+        './src/clientApp.jsx'
     ],
     devtool: 'inline-source-map',
     output: {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, 'public')
+        path: path.resolve(__dirname, 'public'),
+        publicPath: '/public/'
     },
     devServer: {
-        contentBase: path.join(__dirname, "public")
+        publicPath: '/public/'
     },
     resolve: {
         extensions: ['.js', '.jsx', '.json']
@@ -35,5 +36,6 @@ module.exports = {
                 loader: "babel-loader"
             }
         ]
-    }
+    },
+    mode: "development"
 };
