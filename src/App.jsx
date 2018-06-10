@@ -9,6 +9,7 @@ type EmailType = {
     validStatus: boolean,
     required: boolean
 };
+
 type State = {
     toEmail: EmailType,
     ccEmail: EmailType,
@@ -187,12 +188,12 @@ class App extends Component<Props, State> {
                         {this.state.imagePreviewUrl.map(url => (
                             <div className="image-preview-wrapper">
                                 <button className="delete-btn" id={url.id} onClick={this.removeImage}>
-                                    delete
+                                    <i className="fas fa-trash-alt" />
                                 </button>
                                 <img
                                     className="preview-image"
-                                    key={url.id}
                                     src={url.value}
+                                    key={url.id}
                                     alt=""
                                 />
                             </div>
@@ -200,7 +201,7 @@ class App extends Component<Props, State> {
                     </div>
                     <div className="form-footer">
                         <button className="upload-file-btn" onClick={this.uploadMultiFiles}>
-                            upload
+                            <i className="fas fa-paperclip" />
                         </button>
                         <button
                             className="submit-btn"
@@ -209,7 +210,8 @@ class App extends Component<Props, State> {
                             value="Submit"
                             disabled={!canSubmit}
                         >
-                            Send
+                            <i className="fas fa-arrow-right" />
+                            <span className="submit-btn__text">Send</span>
                         </button>
                     </div>
                 </div>

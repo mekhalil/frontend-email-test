@@ -1,3 +1,7 @@
+$fa-font-path: '../font-awesome/webfonts';
+@import "../font-awesome/scss/fontawesome";
+@import "../font-awesome/scss/fa-solid";
+
 body {
     height: 100vh;
     background: linear-gradient(to bottom, #02bfef 0%,#50d2dc 100%) no-repeat;
@@ -10,6 +14,21 @@ body {
 
 #root {
     width: 100vw;
+    @media (min-width: 576px) {
+        width: 80vw;
+    }
+
+    @media (min-width: 768px) {
+        width: 70vw;
+    }
+
+    @media (min-width: 992px) {
+        width: 60vw;
+    }
+
+    @media (min-width: 1200px) {
+        width: 50vw;
+    }
 }
 
 .header {
@@ -19,6 +38,7 @@ body {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
+
 .header__title {
     font-size: 1.25rem;
     padding-left: 1em;
@@ -103,28 +123,18 @@ input:focus {
 
 .image-preview-wrapper:hover .delete-btn {
     transform: scale(1);
+    border-radius: 5px;
+    font-size: 20px;
 }
 
-@media (min-width: 576px) {
-    #root {
-        width: 80vw;
-    }
+.upload-file-btn {
+    padding: 0.625em;
+    border: 1px solid lightgray;
+    border-radius: 50%;
+    font-size: 18px;
+    color: dimgray;
 }
 
-@media (min-width: 768px) {
-    #root {
-        width: 70vw;
-    }
-}
-
-@media (min-width: 992px) {
-    #root {
-        width: 60vw;
-    }
-}
-
-@media (min-width: 1200px) {
-    #root {
-        width: 50vw;
-    }
+.submit-btn__text {
+    margin-left: 10px;
 }
