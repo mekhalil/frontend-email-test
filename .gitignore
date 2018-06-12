@@ -1,3 +1,4 @@
+.DS_Store
 # dependencies
 /node_modules
 
@@ -12,3 +13,4 @@ yarn-debug.log*
 yarn-error.log*
 
 .idea/
+/dist
